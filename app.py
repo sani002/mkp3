@@ -30,10 +30,15 @@ if uploaded_file is not None:
         st.write("Result:")
         label = teachable_machine_classification(image, 'model.h5')
         if label < 0.5:
-            st.write("It might be Monkeypox. You should visit a physician immediately! Thank you.")
+            st.write("It might be Monkeypox. You should visit a dermatologist immediately! Thank you.")
             st.write("")
             st.write("Accuracy:", (1-label)*100)
         else:
-            st.write("It's most probably not monkeypox, but visiting a physician always helps. Thank you.")
+            st.write("It's most probably not monkeypox, but visiting a dermatologist always helps. Thank you.")
             st.write("")
             st.write("Accuracy:", (label)*100)
+st.write("")
+st.write("")
+st.write("")
+st.write("")
+st.write("N.B.: This app is in its early stage. As a prototype, this app is not yet verified by a dermatologist. Thank you.")

@@ -1,6 +1,6 @@
 from pyexpat import model
 import streamlit as st 
-st.image('https://drive.google.com/file/d/1oSYCmRnupVtCYMxogqHwHXaAOpOTwdBZ/view?usp=sharing')
+st.image('https://github.com/sani002/mkpapp/blob/main/Header.png?raw=true')
 st.title("Monkey Pox Detector")
 
 import keras

@@ -11,6 +11,15 @@ hide_streamlit_style = """
             <style>
             #MainMenu {visibility: hidden;}
             footer {visibility: hidden;}
+            footer:after {
+                            content:'This app is in its early stage. As a prototype, this app has not been verified by a dermatologist yet. Thank you.'; 
+                            visibility: visible;
+                            display: block;
+                            position: relative;
+                            #background-color: red;
+                            padding: 5px;
+                            top: 2px;
+                        }
             </style>
             """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
@@ -45,10 +54,3 @@ if uploaded_file is not None:
             st.write("It's most probably not monkeypox, but visiting a dermatologist always helps. Thank you.")
             st.write("")
             st.write("Accuracy:", (label)*100)
-st.write("")
-st.write("")
-st.write("")
-st.write("")
-st.write("")
-st.write("")
-st.write("N.B.: This app is in its early stage. As a prototype, this app hasn't been verified by a dermatologist yet. Thank you.")

@@ -7,6 +7,14 @@ import keras
 from PIL import Image, ImageOps
 import numpy as np
 
+hide_streamlit_style = """
+            <style>
+            #MainMenu {visibility: hidden;}
+            footer {visibility: hidden;}
+            </style>
+            """
+st.markdown(hide_streamlit_style, unsafe_allow_html=True) 
+
 def teachable_machine_classification(img, weights_file):
     model = keras.models.load_model(weights_file)
     data = np.ndarray(shape=(1, 256, 256, 3), dtype=np.float32)
